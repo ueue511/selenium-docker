@@ -11,3 +11,6 @@
 
 ■ .py実行
 - python ['ファイル名'].py
+
+※MysqlコンテナのIPアドレスはコンテナ作成時に確認
+$ hostname -i
