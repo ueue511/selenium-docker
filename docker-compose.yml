@@ -13,3 +13,14 @@ services:
     environment:
       SELENIUM_URL: http://selenium:4444/wd/hub
     tty: true
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    ports:
+      - '3308:3306'
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: $password
+      MYSQL_DATABASE: $MYSQL_DATABASE
